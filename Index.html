@@ -1,8 +1,117 @@
-<html>
-  <head>
-    <title>My first web page</title>
-  </head>
-  <body>
-    Hi How are you
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stylish Navigation Bar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f7fb;
+    }
+
+    .navbar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+      background: linear-gradient(90deg, #007BFF, #0056b3);
+      color: #001f3f;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar .nav-links a {
+      text-decoration: none;
+      color: #e0e8ff;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #ffeb3b;
+    }
+
+    .navbar .search-box input {
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+
+      .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin: 10px 0;
+      }
+
+      .navbar .search-box {
+        width: 100%;
+      }
+
+      .navbar .search-box input {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <!-- Left: Logo -->
+    <div class="logo">MyBrand</div>
+
+    <!-- Middle: Navigation Links -->
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Applications</a>
+      <a href="#">Libraries</a>
+    </div>
+
+    <!-- Right: Search Box -->
+    <div class="search-box">
+      <input type="text" placeholder="Search..." />
+    </div>
+  </nav>
+
+  <!-- Placeholder content to see navbar effect -->
+  <div style="padding-top: 100px; text-align: center;">
+    <h1>Welcome to MyBrand</h1>
+    <p>This is your amazing page content below the navigation bar.</p>
+  </div>
+
+</body>
 </html>
